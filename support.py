@@ -2,6 +2,7 @@
 
 import numpy as np
 import tensorflow as tf
+from copy import deepcopy
 
 class List(list):
   ''' Special list with modified index slicing
