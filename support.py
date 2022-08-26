@@ -60,7 +60,7 @@ def translate(board):
   _B = -5
   B = 5
 
-ec = 0
+  ec = 0
   pieces = {
     'r': _R,
     'n': _K,
