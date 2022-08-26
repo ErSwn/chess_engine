@@ -72,3 +72,26 @@ def tem_push(board, move):
   BOARD = board.copy()
   BOARD.push(move)
   return BOARD
+  
+class __Board:
+  def __init__(self, board = None ):
+    self.position = board
+    
+    if board is None:
+      self.position = np.array([[_R,_K,_B,_Q,_Ki,_B,_K,_R],
+                        [_P,_P,_P,_P,_P,_P,_P,_P ],
+                        [ec,ec,ec,ec,ec,ec,ec,ec],
+                        [ec,ec,ec,ec,ec,ec,ec,ec],
+                        [ec,ec,ec,ec,ec,ec,ec,ec],
+                        [ec,ec,ec,ec,ec,ec,ec,ec],
+                        [P,P,P,P,P,P,P,P],
+                        [R,K,B,Ki,Q,B,K,R]])
+      
+    self.position = tf.keras.utils.to_categorical(self.position, num_classes=13)
+    self.position = self.position.reshape( (8, 8, 13, 1) )
+
+  def get_moves(self, color):
+    pass
+
+
+board_ = __Board()
