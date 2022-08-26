@@ -1,6 +1,7 @@
 ''' Functions and classes used for preprocessing boards on a chess game '''
 
 import numpy as np
+import tensorflow as tf
 
 class List(list):
   ''' Special list with modified index slicing
