@@ -27,7 +27,7 @@ def board_to_numpy( board ):
   return preprocess(board)
 
 def to_categorical( board ):
-  return tf.keras.utils.to_categorical(board, num_classes=13).reshape( (8, 8, 13, 1) )
+  return tf.keras.utils.to_categorical(board, num_classes=13)
 
 _Ki = -6
 Ki = 6
