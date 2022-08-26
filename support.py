@@ -47,6 +47,20 @@ ec = 0
 
 
 def translate(board):
+  _Ki = -6
+  Ki = 6
+  _P = -1
+  P=  1
+  _K = -2
+  K = 2
+  _R = -3
+  R = 3
+  _Q = -4
+  Q = 4
+  _B = -5
+  B = 5
+
+ec = 0
   pieces = {
     'r': _R,
     'n': _K,
