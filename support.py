@@ -45,7 +45,9 @@ B = 5
 ec = 0
 
 
-pieces = {
+
+def translate(board):
+  pieces = {
     'r': _R,
     'n': _K,
     'b': _B,
@@ -59,9 +61,7 @@ pieces = {
     'p': _P,
     'P': P,
     '.': ec
-}
-
-def translate(board):
+  }
   B = [ r.split() for r in board.__str__().split('\n')]
   B = [[ pieces[p] for p in row ] for row in B]
   return B
