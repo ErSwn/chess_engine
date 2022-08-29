@@ -108,6 +108,17 @@ class __Board:
 
   def get_moves(self, color):
     pass
+    
+import numpy as np
+from tqdm import tqdm
+def load_from_memory( f ):
+  s = []
+  data = np.load(f, allow_pickle=True)
 
+  for i in data:
+    data =data[i]
 
-board_ = __Board()
+  for val in tqdm(data):
+    *hist, y = val
+    s.append( [hist, val] )
+  return s
