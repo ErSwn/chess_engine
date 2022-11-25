@@ -3,6 +3,13 @@
 import numpy as np
 import tensorflow as tf
 from copy import deepcopy
+import numpy as np
+from tqdm import tqdm
+
+def unison_shuffled_copies(a, b):
+    assert len(a) == len(b)
+    p = np.random.permutation(len(a))
+    return a[p], b[p]
 
 class List(list):
   ''' Special list with modified index slicing
@@ -109,8 +116,7 @@ class __Board:
   def get_moves(self, color):
     pass
     
-import numpy as np
-from tqdm import tqdm
+
 def load_from_memory( f ):
   s = []
   data = np.load(f, allow_pickle=True)
