@@ -28,7 +28,7 @@ def get_black_view( board ):
   ''' rotates the board
       input: board in numpy shape
   '''
-  return -np.rot90(np.array(board),  2)
+  return -np.rot90(np.array(board, dtype = 'int8),  2)
 
 def board_to_numpy( board ):
   return preprocess(board)
@@ -88,7 +88,7 @@ def translate(board):
   return B
 
 def preprocess(board):
-  return np.array(translate(board))
+  return np.array(translate(board), dtype = 'int8)
 
 
 def tem_push(board, move):
